@@ -7,7 +7,10 @@ on:
       - 'Zero-Sievert-gml-files/**'
       - 'Zero-Sievert-json-files/**'
       - 'Modding-Documentation/**'
-      - 'tools/generate_manifest.py'
+      - '.github/workflows/manifest.yml'
+
+permissions:
+  contents: write
 
 jobs:
   manifest:
@@ -18,38 +21,52 @@ jobs:
         with:
           python-version: '3.11'
 
-      # Build a combined manifest:
-      # - .gml from Zero-Sievert-gml-files
-      # - .json from Zero-Sievert-json-files
-      # - .html from Modding-Documentation
-      - name: Build manifest
+      - name: Generate manifest (creates script, then runs it)
         shell: bash
         run: |
           set -euo pipefail
-          echo "path,type,size_bytes" > manifest.csv
+          mkdir -p tools
+          cat > tools/generate_manifest.py <<'PY'
+          #!/usr/bin/env python3
+          import csv
+          from pathlib import Path
 
-          # Generate partial for GML folder, keep only type=gml rows
-          python tools/generate_manifest.py "Zero-Sievert-gml-files" _gml.csv
-          if [ -s _gml.csv ]; then
-            tail -n +2 _gml.csv | awk -F, '$2=="gml"{print}' >> manifest.csv
-          fi
+          roots = [
+              ("Zero-Sievert-gml-files", {".gml"}),
+              ("Zero-Sievert-json-files", {".json"}),
+              ("Modding-Documentation", {".html"}),
+          ]
 
-          # Generate partial for JSON folder, keep only type=json rows
-          python tools/generate_manifest.py "Zero-Sievert-json-files" _json.csv
-          if [ -s _json.csv ]; then
-            tail -n +2 _json.csv | awk -F, '$2=="json"{print}' >> manifest.csv
-          fi
+          rows = []
+          for root, exts in roots:
+              base = Path(root)
+              if not base.exists():
+                  continue
+              for p in base.rglob("*"):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      try:
+                          size = p.stat().st_size
+                      except Exception:
+                          size = ""
+                      suf = p.suffix.lower()
+                      ftype = "gml" if suf==".gml" else "json" if suf==".json" else "html" if suf==".html" else (suf[1:] if suf else "unknown")
+                      rows.append({
+                          "path": str(p).replace("\\", "/"),
+                          "type": ftype,
+                          "size_bytes": size,
+                      })
 
-          # Append .html from Modding-Documentation (compute size)
-          git ls-files | grep -E '^Modding-Documentation/.*\.html$' || true | while IFS= read -r f; do
-            if [ -f "$f" ]; then size=$(wc -c < "$f"); else size=""; fi
-            printf '%s,html,%s\n' "$f" "$size" >> manifest.csv
-          done
-
-          echo "Wrote $(( $(wc -l < manifest.csv) - 1 )) entries to manifest.csv"
+          rows.sort(key=lambda r: (r["type"], r["path"]))
+          with open("manifest.csv", "w", newline="", encoding="utf-8") as f:
+              w = csv.DictWriter(f, fieldnames=["path","type","size_bytes"])
+              w.writeheader()
+              w.writerows(rows)
+          print(f"Wrote {len(rows)} entries to manifest.csv")
+          PY
+          python tools/generate_manifest.py
 
       - name: Commit manifest
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update manifest.csv (gml/json + docs html)"
+          commit_message: "chore: update manifest.csv"
           file_pattern: "manifest.csv"
