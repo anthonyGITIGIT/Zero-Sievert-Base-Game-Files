@@ -1,0 +1,22 @@
+name: Build manifest
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          gh api repos/${{ github.repository }}/git/trees/${{ github.ref_name }}?recursive=1 \
+            --jq '.tree[] | select(.type=="blob" and (.path|endswith(".gml") or .path|endswith(".json"))) |
+                  [.path, (if (.path|endswith(".gml")) then "gml" else "json" end), (.size // "")] | @csv' \
+            > manifest_body.csv
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: printf "path,type,size_bytes\n" | cat - manifest_body.csv > manifest.csv
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update manifest.csv"
+          file_pattern: "manifest.csv"
