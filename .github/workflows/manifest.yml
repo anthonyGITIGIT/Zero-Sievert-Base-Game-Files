@@ -1,63 +1,29 @@
-name: Build manifest
-on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'Zero-Sievert-gml-files/**'
-      - 'Zero-Sievert-json-files/**'
-      - 'Modding-Documentation/**'
-      - '.github/workflows/manifest.yml'
+- name: Build manifest (gh api, robust)
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  run: |
+    set -euo pipefail
+    tmp=$(mktemp)
 
-permissions:
-  contents: write
-
-jobs:
-  manifest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install jq
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
-
-      - name: Build manifest from Git tree (main)
-        env:
-          REPO:  ${{ github.repository }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          API="https://api.github.com/repos/${REPO}/git/trees/main?recursive=1"
-
-          echo "path,type,size_bytes" > manifest.csv
-          curl -fsSL -H "Authorization: Bearer ${TOKEN}" -H "Accept: application/vnd.github+json" "$API" \
-          | jq -r '
-              .tree
-              | map(select(
-                  .type=="blob" and (
-                    # existing mod source folders
-                    ((.path|startswith("Zero-Sievert-gml-files/") or .path|startswith("Zero-Sievert-json-files/"))
-                     and (.path|test("\\.(gml|json)$"))) or
-                    # NEW: only .html inside Modding-Documentation/
-                    ((.path|startswith("Modding-Documentation/")) and (.path|endswith(".html")))
-                  )
+    gh api "repos/${{ github.repository }}/git/trees/main?recursive=1" \
+      --jq '
+        if (.tree|type) != "array" then [] else
+          [ .tree[]
+            | select(.type=="blob" and (
+                # gml/json under the two folders:
+                ((.path|startswith("Zero-Sievert-gml-files/") or .path|startswith("Zero-Sievert-json-files/"))
+                 and (.path|test("\\.(gml|json)$"))) or
+                # html only under Modding-Documentation:
+                ((.path|startswith("Modding-Documentation/")) and (.path|endswith(".html")))
               ))
-              | .[]? | [
-                  .path,
-                  (if (.path|endswith(".gml")) then "gml"
-                   elif (.path|endswith(".json")) then "json"
-                   elif (.path|endswith(".html")) then "html"
-                   else "unknown" end),
-                  (.size // "")
-                ] | @csv
-            ' >> manifest.csv
+            | [ .path,
+                (if (.path|endswith(".gml")) then "gml"
+                 elif (.path|endswith(".json")) then "json"
+                 else "html" end),
+                (.size // "")
+              ] | @csv
+          ] end
+      ' > "$tmp"
 
-          echo "Wrote $(($(wc -l < manifest.csv)-1)) entries to manifest.csv"
-
-      - name: Commit manifest.csv
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update manifest.csv (include Modding-Documentation/*.html)"
-          file_pattern: "manifest.csv"
+    { echo "path,type,size_bytes"; cat "$tmp"; } > manifest.csv
+    echo "Wrote $(($(wc -l < manifest.csv)-1)) entries to manifest.csv"
