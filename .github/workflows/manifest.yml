@@ -1,43 +1,52 @@
-name: Build manifest
-on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'Zero-Sievert-gml-files/**'
-      - 'Zero-Sievert-json-files/**'
-      - 'Modding-Documentation/**'
-      - '.github/workflows/manifest.yml'
+- name: Build manifest (robust: API with fallback)
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  run: |
+    set -euo pipefail
+    echo "path,type,size_bytes" > manifest.csv
 
-permissions:
-  contents: write
+    tmp_json="$(mktemp)"
+    ok=0
 
-jobs:
-  manifest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    # --- Try GitHub API first (uses gh which is preinstalled on ubuntu-latest) ---
+    if gh api "repos/${{ github.repository }}/git/trees/main?recursive=1" \
+         -H "X-GitHub-Api-Version: 2022-11-28" > "$tmp_json" 2>api.err; then
+      if jq -e '.tree | type == "array"' "$tmp_json" >/dev/null 2>&1; then
+        jq -r '
+          .tree
+          | map(select(
+              .type=="blob" and (
+                ((.path|startswith("Zero-Sievert-gml-files/") or .path|startswith("Zero-Sievert-json-files/"))
+                 and (.path|test("\\.(gml|json)$"))) or
+                ((.path|startswith("Modding-Documentation/")) and (.path|endswith(".html")))
+              )
+            ))
+          | .[]? | [
+              .path,
+              (if (.path|endswith(".gml")) then "gml"
+               elif (.path|endswith(".json")) then "json"
+               elif (.path|endswith(".html")) then "html"
+               else "unknown" end),
+              (.size // "")
+            ] | @csv
+        ' "$tmp_json" >> manifest.csv
+        ok=1
+      fi
+    fi
 
-      - name: Build manifest from working tree (no jq)
-        run: |
-          set -euo pipefail
-          echo "path,type,size_bytes" > manifest.csv
+    # --- Fallback: enumerate from the working tree (no jq, no API) ---
+    if [ "$ok" -ne 1 ]; then
+      echo "::warning::API tree unavailable or invalid JSON; falling back to local listing."
+      git ls-files \
+        | grep -E '^(Zero-Sievert-gml-files/.*\.gml|Zero-Sievert-json-files/.*\.json|Modding-Documentation/.*\.html)$' \
+          || true \
+        | awk '{
+            type="unknown";
+            if ($0 ~ /\.gml$/)  type="gml";
+            else if ($0 ~ /\.json$/) type="json";
+            else if ($0 ~ /\.html$/) type="html";
+            printf "%s,%s,%s\n", $0, type, ""
+          }' >> manifest.csv
+    fi
 
-          # Collect matching files from the repo working tree
-          git ls-files \
-          | grep -E '^(Zero-Sievert-gml-files/.*\.gml|Zero-Sievert-json-files/.*\.json|Modding-Documentation/.*\.html)$' \
-          | awk '{
-              type="unknown";
-              if ($0 ~ /\.gml$/)  type="gml";
-              else if ($0 ~ /\.json$/) type="json";
-              else if ($0 ~ /\.html$/) type="html";
-              printf "%s,%s,%s\n", $0, type, ""
-            }' >> manifest.csv
-
-          echo "Wrote $(( $(wc -l < manifest.csv) - 1 )) entries to manifest.csv"
-
-      - name: Commit manifest.csv
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update manifest.csv"
-          file_pattern: "manifest.csv"
+    echo "Wrote $(( $(wc -l < manifest.csv) - 1 )) entries to manifest.csv"
