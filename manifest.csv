@@ -1,242 +1,4 @@
 path,type,size_bytes
-Modding-Documentation/Constants and Macros/Calibers.html,html,352241
-Modding-Documentation/Constants and Macros/Chest IDs.html,html,359879
-Modding-Documentation/Constants and Macros/Enemy Names.html,html,355922
-Modding-Documentation/Constants and Macros/Faction Names.html,html,352429
-Modding-Documentation/Constants and Macros/Faction Reputation.html,html,352514
-Modding-Documentation/Constants and Macros/Headset Light IDs.html,html,352018
-Modding-Documentation/Constants and Macros/Item Categories.html,html,352615
-Modding-Documentation/Constants and Macros/Item IDs.html,html,385146
-Modding-Documentation/Constants and Macros/Map Names.html,html,352245
-Modding-Documentation/Constants and Macros/NPC Presets.html,html,353252
-Modding-Documentation/Constants and Macros/Object Types.html,html,352070
-Modding-Documentation/Constants and Macros/Pre-Existing Objects.html,html,360250
-Modding-Documentation/Constants and Macros/Speaker Dialogue Types.html,html,353087
-Modding-Documentation/Constants and Macros/Weapon Attachment Slots.html,html,352361
-Modding-Documentation/Constants and Macros/Weapon Firing Modes.html,html,352349
-Modding-Documentation/Constants and Macros/Weapon Mod Types.html,html,352278
-Modding-Documentation/Constants and Macros/Weapon Reload Types.html,html,352447
-Modding-Documentation/Constants and Macros/Weapon Types.html,html,352150
-Modding-Documentation/Event Hooks/Game Events.html,html,352964
-Modding-Documentation/Event Hooks/Player and Object Events.html,html,354621
-Modding-Documentation/Event Hooks/Weapon Script Events.html,html,352802
-Modding-Documentation/Functions/Arrays/Arrays.html,html,355525
-Modding-Documentation/Functions/Chests/ChestAddItem.html,html,354965
-Modding-Documentation/Functions/Chests/ChestAddSpecialItem.html,html,354823
-Modding-Documentation/Functions/Chests/ChestCreate.html,html,354299
-Modding-Documentation/Functions/Chests/ChestSetAlwaysSeen.html,html,354593
-Modding-Documentation/Functions/Chests/ChestSetDestroyWhenEmpty.html,html,354666
-Modding-Documentation/Functions/Chests/ChestSetFromEnemy.html,html,354628
-Modding-Documentation/Functions/Chests/ChestSetIsDrop.html,html,354500
-Modding-Documentation/Functions/Chests/ChestSetItemCount.html,html,354882
-Modding-Documentation/Functions/Chests/ChestSetItemDropChance.html,html,355367
-Modding-Documentation/Functions/Chests/ChestSetItemsDecay.html,html,354596
-Modding-Documentation/Functions/Chests/ChestSetName.html,html,354449
-Modding-Documentation/Functions/Chests/ChestSetSoundType.html,html,355053
-Modding-Documentation/Functions/Chests/ChestSetSprite.html,html,354484
-Modding-Documentation/Functions/Collisions/CollisionWalkable.html,html,354448
-Modding-Documentation/Functions/Collisions/PlaceMeeting.html,html,355022
-Modding-Documentation/Functions/Crafting/CraftingRecipeCreate.html,html,357300
-Modding-Documentation/Functions/Drawing/Drawing.html,html,357794
-Modding-Documentation/Functions/Events/EventAssignFunction.html,html,354936
-Modding-Documentation/Functions/Factions/FactionCreate.html,html,354353
-Modding-Documentation/Functions/Factions/FactionExists.html,html,354494
-Modding-Documentation/Functions/Factions/FactionSetName.html,html,354587
-Modding-Documentation/Functions/Factions/FactionSetRelationship.html,html,355470
-Modding-Documentation/Functions/File Data/FileDataRead.html,html,354474
-Modding-Documentation/Functions/File Data/FileDataWrite.html,html,354794
-Modding-Documentation/Functions/Input/Input.html,html,362874
-Modding-Documentation/Functions/Instances/InstanceCreate.html,html,354541
-Modding-Documentation/Functions/Inventory/InventoryItemCount.html,html,355054
-Modding-Documentation/Functions/Inventory/InventoryItemExists.html,html,354632
-Modding-Documentation/Functions/Items/Ammo/ItemCreateAmmo.html,html,356758
-Modding-Documentation/Functions/Items/Armor/ItemArmorCreate.html,html,357311
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetAnomaly.html,html,353286
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetClass.html,html,353231
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetFragility.html,html,353269
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetPierce.html,html,353291
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetRadiation.html,html,353541
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteDead.html,html,354964
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteIdle.html,html,354964
-Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteRun.html,html,354950
-Modding-Documentation/Functions/Items/Backpacks/ItemBackpackCreate.html,html,356761
-Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetErgonomic.html,html,353502
-Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetMovementSpeed.html,html,353488
-Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetSpriteGame.html,html,355011
-Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetWeight.html,html,353454
-Modding-Documentation/Functions/Items/Barter/ItemBarterCreate.html,html,354912
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableCreate.html,html,356142
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetAnimation.html,html,357080
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetEnergy.html,html,697418
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetEvent.html,html,354807
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetFatigue.html,html,438339
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetRadiation.html,html,476045
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetSound.html,html,356005
-Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetThirst.html,html,473130
-Modding-Documentation/Functions/Items/Documents/ItemDocumentCreate.html,html,355192
-Modding-Documentation/Functions/Items/Generic Usage/ItemCreate.html,html,354834
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetDescription.html,html,354716
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetName.html,html,354552
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetPriceValue.html,html,354604
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetSpriteIngame.html,html,354952
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetSpriteInventory.html,html,355046
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetStackLimit.html,html,354619
-Modding-Documentation/Functions/Items/Generic Usage/ItemSetWeight.html,html,354534
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeCreate.html,html,357832
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetAnimation.html,html,357145
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDamageMax.html,html,1619483
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDamageMin.html,html,1619100
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDetonationDuration.html,html,353979
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDetonationType.html,html,355301
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetFuseTime.html,html,355254
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetRadiusMaxDamage.html,html,1619324
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetRadiusMinDamage.html,html,1619335
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowMax.html,html,355026
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowMin.html,html,355022
-Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowType.html,html,351689
-Modding-Documentation/Functions/Items/Headset/ItemHeadsetCreate.html,html,4474744
-Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetLightID.html,html,5605006
-Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetType.html,html,4470078
-Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetVisionValues.html,html,50074743
-Modding-Documentation/Functions/Items/Headsets/ItemCreateHeadset (UNFINISHED).html,html,355012
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorCreate.html,html,357617
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetBleedImmune.html,html,353352
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetBleedRec.html,html,353384
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetDuration.html,html,353352
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHpRegen.html,html,353664
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHunger.html,html,695644
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHungerRegen.html,html,696034
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetMaxHp.html,html,353325
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetMaxWeight.html,html,353425
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetRadDef.html,html,474565
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetRadRegen.html,html,474758
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetStaminaMax.html,html,436715
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetStaminaRegen.html,html,437042
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetThirst.html,html,471478
-Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetThirstRegen.html,html,471853
-Modding-Documentation/Functions/Items/Key/ItemKeyCreate.html,html,354976
-Modding-Documentation/Functions/Items/Medical/ItemMedicalCreate.html,html,360800
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetAnimation.html,html,354948
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetBleed.html,html,354895
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetCanMove.html,html,354812
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetDuration.html,html,355142
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetMoveSpeedMultiplier.html,html,355095
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetRadiation.html,html,476020
-Modding-Documentation/Functions/Items/Medical/ItemMedicalSetWound.html,html,354895
-Modding-Documentation/Functions/Items/Repair Items/ItemArmorRepairCreate.html,html,356793
-Modding-Documentation/Functions/Items/Repair Items/ItemWeaponRepairCreate.html,html,356244
-Modding-Documentation/Functions/Languages/LanguageCreate.html,html,355323
-Modding-Documentation/Functions/Languages/LanguageSetFontOffsets.html,html,355227
-Modding-Documentation/Functions/Languages/LanguageSetFontSizes.html,html,354898
-Modding-Documentation/Functions/Loadouts/LoadoutAddItem.html,html,354943
-Modding-Documentation/Functions/Loadouts/LoadoutClear.html,html,354323
-Modding-Documentation/Functions/Math and Randoms/Math.html,html,372888
-Modding-Documentation/Functions/Misc/Real.html,html,354269
-Modding-Documentation/Functions/Misc/RoomGetCurrent.html,html,354327
-Modding-Documentation/Functions/Misc/ShowMessage.html,html,354332
-Modding-Documentation/Functions/Misc/String.html,html,354278
-Modding-Documentation/Functions/NPCs/NpcCopy.html,html,354688
-Modding-Documentation/Functions/NPCs/NpcCreate.html,html,354308
-Modding-Documentation/Functions/NPCs/NpcObjectDestroy.html,html,354794
-Modding-Documentation/Functions/NPCs/NpcObjectSpawnNearPlayer.html,html,355133
-Modding-Documentation/Functions/NPCs/NpcSetArmor.html,html,354568
-Modding-Documentation/Functions/NPCs/NpcSetChestDropped.html,html,354627
-Modding-Documentation/Functions/NPCs/NpcSetExperience.html,html,354587
-Modding-Documentation/Functions/NPCs/NpcSetFaction.html,html,354475
-Modding-Documentation/Functions/NPCs/NpcSetFootstep.html,html,355070
-Modding-Documentation/Functions/NPCs/NpcSetHp.html,html,354352
-Modding-Documentation/Functions/NPCs/NpcSetImageSpeed.html,html,354765
-Modding-Documentation/Functions/NPCs/NpcSetMeleeDamage.html,html,354573
-Modding-Documentation/Functions/NPCs/NpcSetName.html,html,354438
-Modding-Documentation/Functions/NPCs/NpcSetPreset.html,html,354767
-Modding-Documentation/Functions/NPCs/NpcSetRecoilAimRadius.html,html,1404143
-Modding-Documentation/Functions/NPCs/NpcSetRecoilCrosshairDelay.html,html,354806
-Modding-Documentation/Functions/NPCs/NpcSetRotatingAngleRate.html,html,354771
-Modding-Documentation/Functions/NPCs/NpcSetSpeaker.html,html,354491
-Modding-Documentation/Functions/NPCs/NpcSetSpriteDead.html,html,354558
-Modding-Documentation/Functions/NPCs/NpcSetSpriteIdle.html,html,354735
-Modding-Documentation/Functions/NPCs/NpcSetSpriteMoving.html,html,354597
-Modding-Documentation/Functions/NPCs/NpcSetSweetAngleChance.html,html,354994
-Modding-Documentation/Functions/NPCs/NpcSetTraderId.html,html,354499
-Modding-Documentation/Functions/NPCs/NpcSetWeapon.html,html,354696
-Modding-Documentation/Functions/NPCs/NpcSpawn.html,html,354671
-Modding-Documentation/Functions/Objects/ObjectCreate.html,html,354528
-Modding-Documentation/Functions/Objects/ObjectExists.html,html,354310
-Modding-Documentation/Functions/Objects/ObjectGetAllInstances.html,html,355012
-Modding-Documentation/Functions/Objects/ObjectSetScript.html,html,355139
-Modding-Documentation/Functions/Objects/ObjectSetType.html,html,354959
-Modding-Documentation/Functions/Objects/ObjectSpawn.html,html,354582
-Modding-Documentation/Functions/Particles/Particles.html,html,376587
-Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeApproach (IN PROGRESS).html,html,356233
-Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeCollect.html,html,355453
-Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeKill.html,html,356371
-Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeSurviveMap.html,html,355781
-Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeSurviveMinimumMoney.html,html,356106
-Modding-Documentation/Functions/Quests/QuestAddObjective.html,html,354813
-Modding-Documentation/Functions/Quests/QuestAddReward.html,html,354820
-Modding-Documentation/Functions/Quests/QuestCreate.html,html,354697
-Modding-Documentation/Functions/Quests/QuestIsComplete.html,html,354502
-Modding-Documentation/Functions/Quests/QuestSetName.html,html,354503
-Modding-Documentation/Functions/Quests/QuestSetText.html,html,354602
-Modding-Documentation/Functions/Scripts/ScriptExpose.html,html,354744
-Modding-Documentation/Functions/Scripts/ScriptGet.html,html,354772
-Modding-Documentation/Functions/Sound/SoundGet.html,html,354516
-Modding-Documentation/Functions/Sound/SoundLoad.html,html,354586
-Modding-Documentation/Functions/Sound/SoundPlay.html,html,354967
-Modding-Documentation/Functions/Sound/SoundPlayAt.html,html,355378
-Modding-Documentation/Functions/Speakers/SpeakerAddDialogueChoice.html,html,354971
-Modding-Documentation/Functions/Speakers/SpeakerAddHello.html,html,354531
-Modding-Documentation/Functions/Speakers/SpeakerAddQuest.html,html,354470
-Modding-Documentation/Functions/Speakers/SpeakerAddQuestion.html,html,354754
-Modding-Documentation/Functions/Speakers/SpeakerCreate.html,html,354872
-Modding-Documentation/Functions/Speakers/SpeakerGetIndex.html,html,354397
-Modding-Documentation/Functions/Sprites/SpriteGet.html,html,354975
-Modding-Documentation/Functions/Sprites/SpriteGetHeight.html,html,354485
-Modding-Documentation/Functions/Sprites/SpriteGetWidth.html,html,354466
-Modding-Documentation/Functions/Sprites/SpriteLoad.html,html,356535
-Modding-Documentation/Functions/Sprites/SpriteSetOrigin.html,html,354773
-Modding-Documentation/Functions/Sprites/SpriteSetSpeed.html,html,354736
-Modding-Documentation/Functions/Structs/Structs.html,html,354860
-Modding-Documentation/Functions/Time/TimeGetDay.html,html,353992
-Modding-Documentation/Functions/Time/TimeGetHour.html,html,354102
-Modding-Documentation/Functions/Time/TimeGetMinute.html,html,354007
-Modding-Documentation/Functions/Time/TimeGetMonth.html,html,353997
-Modding-Documentation/Functions/Time/TimeGetSecond.html,html,354009
-Modding-Documentation/Functions/Time/TimeGetYear.html,html,353954
-Modding-Documentation/Functions/Traders/TraderAddItem.html,html,355201
-Modding-Documentation/Functions/Traders/TraderCreate.html,html,354407
-Modding-Documentation/Functions/Traders/TraderSetFaction.html,html,354586
-Modding-Documentation/Functions/Traders/TraderSetFormatPages.html,html,354653
-Modding-Documentation/Functions/Traders/TraderSetMoney.html,html,354552
-Modding-Documentation/Functions/Traders/TraderSetName.html,html,354545
-Modding-Documentation/Functions/Weapons/WeaponCopy.html,html,354918
-Modding-Documentation/Functions/Weapons/WeaponCreate.html,html,356056
-Modding-Documentation/Functions/Weapons/WeaponModCreate.html,html,356868
-Modding-Documentation/Functions/Weapons/WeaponModLaserConfigure.html,html,354869
-Modding-Documentation/Functions/Weapons/WeaponModScopeConfigure.html,html,355561
-Modding-Documentation/Functions/Weapons/WeaponSetAmmo.html,html,354569
-Modding-Documentation/Functions/Weapons/WeaponSetCaliber.html,html,354701
-Modding-Documentation/Functions/Weapons/WeaponSetErgonomics.html,html,354720
-Modding-Documentation/Functions/Weapons/WeaponSetFireMode.html,html,354849
-Modding-Documentation/Functions/Weapons/WeaponSetRateOfFire.html,html,354648
-Modding-Documentation/Functions/Weapons/WeaponSetRecoil.html,html,354640
-Modding-Documentation/Functions/Weapons/WeaponSetReloadTime.html,html,354664
-Modding-Documentation/Functions/Weapons/WeaponSetReloadType.html,html,354883
-Modding-Documentation/Functions/Weapons/WeaponSetScript.html,html,355238
-Modding-Documentation/Functions/Weapons/WeaponSetWeaponModData.html,html,356502
-Modding-Documentation/Functions/Weapons/WeaponSetWeaponType.html,html,354853
-Modding-Documentation/Objects/Objects.html,html,365256
-Modding-Documentation/Overview/Getting Started.html,html,665829
-Modding-Documentation/Overview/Items.html,html,354597
-Modding-Documentation/Overview/Mod Upload Errors and Requirements.html,html,356597
-Modding-Documentation/Overview/Modding Crashes.html,html,351999
-Modding-Documentation/Overview/Updating Workshop Mods.html,html,353079
-Modding-Documentation/Overview/Weapons.html,html,358153
-Modding-Documentation/Programming Language (Catspeak)/Expressions.html,html,356840
-Modding-Documentation/Programming Language (Catspeak)/Interacting With Instances.html,html,351888
-Modding-Documentation/Programming Language (Catspeak)/Keyword Differences.html,html,351746
-Modding-Documentation/Programming Language (Catspeak)/Lexical Grammar.html,html,362173
-Modding-Documentation/Programming Language (Catspeak)/Pitfalls.html,html,360198
 Zero-Sievert-gml-files/gml_GlobalScript_BT_function.gml,gml,11189
 Zero-Sievert-gml-files/gml_GlobalScript_BT_init.gml,gml,4197
 Zero-Sievert-gml-files/gml_GlobalScript_BT_traverse.gml,gml,16216
@@ -3278,6 +3040,244 @@ Zero-Sievert-gml-files/gml_Room_r_hub_Create.gml,gml,786
 Zero-Sievert-gml-files/gml_Room_test_room_Create.gml,gml,822
 Zero-Sievert-gml-files/gml_Script_window_get_showborder.gml,gml,48
 Zero-Sievert-gml-files/gml_Script_window_set_showborder.gml,gml,220
+Modding-Documentation/Constants and Macros/Calibers.html,html,352241
+Modding-Documentation/Constants and Macros/Chest IDs.html,html,359879
+Modding-Documentation/Constants and Macros/Enemy Names.html,html,355922
+Modding-Documentation/Constants and Macros/Faction Names.html,html,352429
+Modding-Documentation/Constants and Macros/Faction Reputation.html,html,352514
+Modding-Documentation/Constants and Macros/Headset Light IDs.html,html,352018
+Modding-Documentation/Constants and Macros/Item Categories.html,html,352615
+Modding-Documentation/Constants and Macros/Item IDs.html,html,385146
+Modding-Documentation/Constants and Macros/Map Names.html,html,352245
+Modding-Documentation/Constants and Macros/NPC Presets.html,html,353252
+Modding-Documentation/Constants and Macros/Object Types.html,html,352070
+Modding-Documentation/Constants and Macros/Pre-Existing Objects.html,html,360250
+Modding-Documentation/Constants and Macros/Speaker Dialogue Types.html,html,353087
+Modding-Documentation/Constants and Macros/Weapon Attachment Slots.html,html,352361
+Modding-Documentation/Constants and Macros/Weapon Firing Modes.html,html,352349
+Modding-Documentation/Constants and Macros/Weapon Mod Types.html,html,352278
+Modding-Documentation/Constants and Macros/Weapon Reload Types.html,html,352447
+Modding-Documentation/Constants and Macros/Weapon Types.html,html,352150
+Modding-Documentation/Event Hooks/Game Events.html,html,352964
+Modding-Documentation/Event Hooks/Player and Object Events.html,html,354621
+Modding-Documentation/Event Hooks/Weapon Script Events.html,html,352802
+Modding-Documentation/Functions/Arrays/Arrays.html,html,355525
+Modding-Documentation/Functions/Chests/ChestAddItem.html,html,354965
+Modding-Documentation/Functions/Chests/ChestAddSpecialItem.html,html,354823
+Modding-Documentation/Functions/Chests/ChestCreate.html,html,354299
+Modding-Documentation/Functions/Chests/ChestSetAlwaysSeen.html,html,354593
+Modding-Documentation/Functions/Chests/ChestSetDestroyWhenEmpty.html,html,354666
+Modding-Documentation/Functions/Chests/ChestSetFromEnemy.html,html,354628
+Modding-Documentation/Functions/Chests/ChestSetIsDrop.html,html,354500
+Modding-Documentation/Functions/Chests/ChestSetItemCount.html,html,354882
+Modding-Documentation/Functions/Chests/ChestSetItemDropChance.html,html,355367
+Modding-Documentation/Functions/Chests/ChestSetItemsDecay.html,html,354596
+Modding-Documentation/Functions/Chests/ChestSetName.html,html,354449
+Modding-Documentation/Functions/Chests/ChestSetSoundType.html,html,355053
+Modding-Documentation/Functions/Chests/ChestSetSprite.html,html,354484
+Modding-Documentation/Functions/Collisions/CollisionWalkable.html,html,354448
+Modding-Documentation/Functions/Collisions/PlaceMeeting.html,html,355022
+Modding-Documentation/Functions/Crafting/CraftingRecipeCreate.html,html,357300
+Modding-Documentation/Functions/Drawing/Drawing.html,html,357794
+Modding-Documentation/Functions/Events/EventAssignFunction.html,html,354936
+Modding-Documentation/Functions/Factions/FactionCreate.html,html,354353
+Modding-Documentation/Functions/Factions/FactionExists.html,html,354494
+Modding-Documentation/Functions/Factions/FactionSetName.html,html,354587
+Modding-Documentation/Functions/Factions/FactionSetRelationship.html,html,355470
+Modding-Documentation/Functions/File Data/FileDataRead.html,html,354474
+Modding-Documentation/Functions/File Data/FileDataWrite.html,html,354794
+Modding-Documentation/Functions/Input/Input.html,html,362874
+Modding-Documentation/Functions/Instances/InstanceCreate.html,html,354541
+Modding-Documentation/Functions/Inventory/InventoryItemCount.html,html,355054
+Modding-Documentation/Functions/Inventory/InventoryItemExists.html,html,354632
+Modding-Documentation/Functions/Items/Ammo/ItemCreateAmmo.html,html,356758
+Modding-Documentation/Functions/Items/Armor/ItemArmorCreate.html,html,357311
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetAnomaly.html,html,353286
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetClass.html,html,353231
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetFragility.html,html,353269
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetPierce.html,html,353291
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetRadiation.html,html,353541
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteDead.html,html,354964
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteIdle.html,html,354964
+Modding-Documentation/Functions/Items/Armor/ItemArmorSetSpriteRun.html,html,354950
+Modding-Documentation/Functions/Items/Backpacks/ItemBackpackCreate.html,html,356761
+Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetErgonomic.html,html,353502
+Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetMovementSpeed.html,html,353488
+Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetSpriteGame.html,html,355011
+Modding-Documentation/Functions/Items/Backpacks/ItemBackpackSetWeight.html,html,353454
+Modding-Documentation/Functions/Items/Barter/ItemBarterCreate.html,html,354912
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableCreate.html,html,356142
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetAnimation.html,html,357080
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetEnergy.html,html,697418
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetEvent.html,html,354807
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetFatigue.html,html,438339
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetRadiation.html,html,476045
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetSound.html,html,356005
+Modding-Documentation/Functions/Items/Consumables/ItemConsumableSetThirst.html,html,473130
+Modding-Documentation/Functions/Items/Documents/ItemDocumentCreate.html,html,355192
+Modding-Documentation/Functions/Items/Generic Usage/ItemCreate.html,html,354834
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetDescription.html,html,354716
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetName.html,html,354552
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetPriceValue.html,html,354604
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetSpriteIngame.html,html,354952
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetSpriteInventory.html,html,355046
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetStackLimit.html,html,354619
+Modding-Documentation/Functions/Items/Generic Usage/ItemSetWeight.html,html,354534
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeCreate.html,html,357832
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetAnimation.html,html,357145
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDamageMax.html,html,1619483
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDamageMin.html,html,1619100
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDetonationDuration.html,html,353979
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetDetonationType.html,html,355301
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetFuseTime.html,html,355254
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetRadiusMaxDamage.html,html,1619324
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetRadiusMinDamage.html,html,1619335
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowMax.html,html,355026
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowMin.html,html,355022
+Modding-Documentation/Functions/Items/Grenade/ItemGrenadeSetThrowType.html,html,351689
+Modding-Documentation/Functions/Items/Headset/ItemHeadsetCreate.html,html,4474744
+Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetLightID.html,html,5605006
+Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetType.html,html,4470078
+Modding-Documentation/Functions/Items/Headset/ItemHeadsetSetVisionValues.html,html,50074743
+Modding-Documentation/Functions/Items/Headsets/ItemCreateHeadset (UNFINISHED).html,html,355012
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorCreate.html,html,357617
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetBleedImmune.html,html,353352
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetBleedRec.html,html,353384
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetDuration.html,html,353352
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHpRegen.html,html,353664
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHunger.html,html,695644
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetHungerRegen.html,html,696034
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetMaxHp.html,html,353325
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetMaxWeight.html,html,353425
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetRadDef.html,html,474565
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetRadRegen.html,html,474758
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetStaminaMax.html,html,436715
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetStaminaRegen.html,html,437042
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetThirst.html,html,471478
+Modding-Documentation/Functions/Items/Injectors/ItemInjectorSetThirstRegen.html,html,471853
+Modding-Documentation/Functions/Items/Key/ItemKeyCreate.html,html,354976
+Modding-Documentation/Functions/Items/Medical/ItemMedicalCreate.html,html,360800
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetAnimation.html,html,354948
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetBleed.html,html,354895
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetCanMove.html,html,354812
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetDuration.html,html,355142
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetMoveSpeedMultiplier.html,html,355095
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetRadiation.html,html,476020
+Modding-Documentation/Functions/Items/Medical/ItemMedicalSetWound.html,html,354895
+Modding-Documentation/Functions/Items/Repair Items/ItemArmorRepairCreate.html,html,356793
+Modding-Documentation/Functions/Items/Repair Items/ItemWeaponRepairCreate.html,html,356244
+Modding-Documentation/Functions/Languages/LanguageCreate.html,html,355323
+Modding-Documentation/Functions/Languages/LanguageSetFontOffsets.html,html,355227
+Modding-Documentation/Functions/Languages/LanguageSetFontSizes.html,html,354898
+Modding-Documentation/Functions/Loadouts/LoadoutAddItem.html,html,354943
+Modding-Documentation/Functions/Loadouts/LoadoutClear.html,html,354323
+Modding-Documentation/Functions/Math and Randoms/Math.html,html,372888
+Modding-Documentation/Functions/Misc/Real.html,html,354269
+Modding-Documentation/Functions/Misc/RoomGetCurrent.html,html,354327
+Modding-Documentation/Functions/Misc/ShowMessage.html,html,354332
+Modding-Documentation/Functions/Misc/String.html,html,354278
+Modding-Documentation/Functions/NPCs/NpcCopy.html,html,354688
+Modding-Documentation/Functions/NPCs/NpcCreate.html,html,354308
+Modding-Documentation/Functions/NPCs/NpcObjectDestroy.html,html,354794
+Modding-Documentation/Functions/NPCs/NpcObjectSpawnNearPlayer.html,html,355133
+Modding-Documentation/Functions/NPCs/NpcSetArmor.html,html,354568
+Modding-Documentation/Functions/NPCs/NpcSetChestDropped.html,html,354627
+Modding-Documentation/Functions/NPCs/NpcSetExperience.html,html,354587
+Modding-Documentation/Functions/NPCs/NpcSetFaction.html,html,354475
+Modding-Documentation/Functions/NPCs/NpcSetFootstep.html,html,355070
+Modding-Documentation/Functions/NPCs/NpcSetHp.html,html,354352
+Modding-Documentation/Functions/NPCs/NpcSetImageSpeed.html,html,354765
+Modding-Documentation/Functions/NPCs/NpcSetMeleeDamage.html,html,354573
+Modding-Documentation/Functions/NPCs/NpcSetName.html,html,354438
+Modding-Documentation/Functions/NPCs/NpcSetPreset.html,html,354767
+Modding-Documentation/Functions/NPCs/NpcSetRecoilAimRadius.html,html,1404143
+Modding-Documentation/Functions/NPCs/NpcSetRecoilCrosshairDelay.html,html,354806
+Modding-Documentation/Functions/NPCs/NpcSetRotatingAngleRate.html,html,354771
+Modding-Documentation/Functions/NPCs/NpcSetSpeaker.html,html,354491
+Modding-Documentation/Functions/NPCs/NpcSetSpriteDead.html,html,354558
+Modding-Documentation/Functions/NPCs/NpcSetSpriteIdle.html,html,354735
+Modding-Documentation/Functions/NPCs/NpcSetSpriteMoving.html,html,354597
+Modding-Documentation/Functions/NPCs/NpcSetSweetAngleChance.html,html,354994
+Modding-Documentation/Functions/NPCs/NpcSetTraderId.html,html,354499
+Modding-Documentation/Functions/NPCs/NpcSetWeapon.html,html,354696
+Modding-Documentation/Functions/NPCs/NpcSpawn.html,html,354671
+Modding-Documentation/Functions/Objects/ObjectCreate.html,html,354528
+Modding-Documentation/Functions/Objects/ObjectExists.html,html,354310
+Modding-Documentation/Functions/Objects/ObjectGetAllInstances.html,html,355012
+Modding-Documentation/Functions/Objects/ObjectSetScript.html,html,355139
+Modding-Documentation/Functions/Objects/ObjectSetType.html,html,354959
+Modding-Documentation/Functions/Objects/ObjectSpawn.html,html,354582
+Modding-Documentation/Functions/Particles/Particles.html,html,376587
+Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeApproach (IN PROGRESS).html,html,356233
+Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeCollect.html,html,355453
+Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeKill.html,html,356371
+Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeSurviveMap.html,html,355781
+Modding-Documentation/Functions/Quests/Objective Types/QuestObjectiveTypeSurviveMinimumMoney.html,html,356106
+Modding-Documentation/Functions/Quests/QuestAddObjective.html,html,354813
+Modding-Documentation/Functions/Quests/QuestAddReward.html,html,354820
+Modding-Documentation/Functions/Quests/QuestCreate.html,html,354697
+Modding-Documentation/Functions/Quests/QuestIsComplete.html,html,354502
+Modding-Documentation/Functions/Quests/QuestSetName.html,html,354503
+Modding-Documentation/Functions/Quests/QuestSetText.html,html,354602
+Modding-Documentation/Functions/Scripts/ScriptExpose.html,html,354744
+Modding-Documentation/Functions/Scripts/ScriptGet.html,html,354772
+Modding-Documentation/Functions/Sound/SoundGet.html,html,354516
+Modding-Documentation/Functions/Sound/SoundLoad.html,html,354586
+Modding-Documentation/Functions/Sound/SoundPlay.html,html,354967
+Modding-Documentation/Functions/Sound/SoundPlayAt.html,html,355378
+Modding-Documentation/Functions/Speakers/SpeakerAddDialogueChoice.html,html,354971
+Modding-Documentation/Functions/Speakers/SpeakerAddHello.html,html,354531
+Modding-Documentation/Functions/Speakers/SpeakerAddQuest.html,html,354470
+Modding-Documentation/Functions/Speakers/SpeakerAddQuestion.html,html,354754
+Modding-Documentation/Functions/Speakers/SpeakerCreate.html,html,354872
+Modding-Documentation/Functions/Speakers/SpeakerGetIndex.html,html,354397
+Modding-Documentation/Functions/Sprites/SpriteGet.html,html,354975
+Modding-Documentation/Functions/Sprites/SpriteGetHeight.html,html,354485
+Modding-Documentation/Functions/Sprites/SpriteGetWidth.html,html,354466
+Modding-Documentation/Functions/Sprites/SpriteLoad.html,html,356535
+Modding-Documentation/Functions/Sprites/SpriteSetOrigin.html,html,354773
+Modding-Documentation/Functions/Sprites/SpriteSetSpeed.html,html,354736
+Modding-Documentation/Functions/Structs/Structs.html,html,354860
+Modding-Documentation/Functions/Time/TimeGetDay.html,html,353992
+Modding-Documentation/Functions/Time/TimeGetHour.html,html,354102
+Modding-Documentation/Functions/Time/TimeGetMinute.html,html,354007
+Modding-Documentation/Functions/Time/TimeGetMonth.html,html,353997
+Modding-Documentation/Functions/Time/TimeGetSecond.html,html,354009
+Modding-Documentation/Functions/Time/TimeGetYear.html,html,353954
+Modding-Documentation/Functions/Traders/TraderAddItem.html,html,355201
+Modding-Documentation/Functions/Traders/TraderCreate.html,html,354407
+Modding-Documentation/Functions/Traders/TraderSetFaction.html,html,354586
+Modding-Documentation/Functions/Traders/TraderSetFormatPages.html,html,354653
+Modding-Documentation/Functions/Traders/TraderSetMoney.html,html,354552
+Modding-Documentation/Functions/Traders/TraderSetName.html,html,354545
+Modding-Documentation/Functions/Weapons/WeaponCopy.html,html,354918
+Modding-Documentation/Functions/Weapons/WeaponCreate.html,html,356056
+Modding-Documentation/Functions/Weapons/WeaponModCreate.html,html,356868
+Modding-Documentation/Functions/Weapons/WeaponModLaserConfigure.html,html,354869
+Modding-Documentation/Functions/Weapons/WeaponModScopeConfigure.html,html,355561
+Modding-Documentation/Functions/Weapons/WeaponSetAmmo.html,html,354569
+Modding-Documentation/Functions/Weapons/WeaponSetCaliber.html,html,354701
+Modding-Documentation/Functions/Weapons/WeaponSetErgonomics.html,html,354720
+Modding-Documentation/Functions/Weapons/WeaponSetFireMode.html,html,354849
+Modding-Documentation/Functions/Weapons/WeaponSetRateOfFire.html,html,354648
+Modding-Documentation/Functions/Weapons/WeaponSetRecoil.html,html,354640
+Modding-Documentation/Functions/Weapons/WeaponSetReloadTime.html,html,354664
+Modding-Documentation/Functions/Weapons/WeaponSetReloadType.html,html,354883
+Modding-Documentation/Functions/Weapons/WeaponSetScript.html,html,355238
+Modding-Documentation/Functions/Weapons/WeaponSetWeaponModData.html,html,356502
+Modding-Documentation/Functions/Weapons/WeaponSetWeaponType.html,html,354853
+Modding-Documentation/Objects/Objects.html,html,365256
+Modding-Documentation/Overview/Getting Started.html,html,665829
+Modding-Documentation/Overview/Items.html,html,354597
+Modding-Documentation/Overview/Mod Upload Errors and Requirements.html,html,356597
+Modding-Documentation/Overview/Modding Crashes.html,html,351999
+Modding-Documentation/Overview/Updating Workshop Mods.html,html,353079
+Modding-Documentation/Overview/Weapons.html,html,358153
+Modding-Documentation/Programming Language (Catspeak)/Expressions.html,html,356840
+Modding-Documentation/Programming Language (Catspeak)/Interacting With Instances.html,html,351888
+Modding-Documentation/Programming Language (Catspeak)/Keyword Differences.html,html,351746
+Modding-Documentation/Programming Language (Catspeak)/Lexical Grammar.html,html,362173
+Modding-Documentation/Programming Language (Catspeak)/Pitfalls.html,html,360198
 Zero-Sievert-json-files/ammo.json,json,22827
 Zero-Sievert-json-files/armor.json,json,30137
 Zero-Sievert-json-files/backpack.json,json,7495
