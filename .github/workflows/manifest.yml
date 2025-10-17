@@ -1,5 +1,4 @@
 name: Build manifest
-
 on:
   workflow_dispatch:
   push:
@@ -8,43 +7,48 @@ on:
       - 'Zero-Sievert-gml-files/**'
       - 'Zero-Sievert-json-files/**'
       - 'Modding-Documentation/**'
-      - '.github/workflows/manifest.yml'
-
-permissions:
-  contents: write
+      - 'tools/generate_manifest.py'
 
 jobs:
   manifest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Build manifest from working tree (no API/jq)
+      # Build a combined manifest:
+      # - .gml from Zero-Sievert-gml-files
+      # - .json from Zero-Sievert-json-files
+      # - .html from Modding-Documentation
+      - name: Build manifest
         shell: bash
         run: |
           set -euo pipefail
           echo "path,type,size_bytes" > manifest.csv
 
-          # List tracked files and filter by the three folders + extensions
-          while IFS= read -r f; do
-            case "$f" in
-              Zero-Sievert-gml-files/*.gml)  type="gml"  ;;
-              Zero-Sievert-json-files/*.json) type="json" ;;
-              Modding-Documentation/*.html)   type="html" ;;
-              *) continue ;;
-            esac
+          # Generate partial for GML folder, keep only type=gml rows
+          python tools/generate_manifest.py "Zero-Sievert-gml-files" _gml.csv
+          if [ -s _gml.csv ]; then
+            tail -n +2 _gml.csv | awk -F, '$2=="gml"{print}' >> manifest.csv
+          fi
 
-            if [[ -f "$f" ]]; then
-              size=$(wc -c < "$f")
-            else
-              size=""
-            fi
-            printf '%s,%s,%s\n' "$f" "$type" "$size" >> manifest.csv
-          done < <(git ls-files)
+          # Generate partial for JSON folder, keep only type=json rows
+          python tools/generate_manifest.py "Zero-Sievert-json-files" _json.csv
+          if [ -s _json.csv ]; then
+            tail -n +2 _json.csv | awk -F, '$2=="json"{print}' >> manifest.csv
+          fi
+
+          # Append .html from Modding-Documentation (compute size)
+          git ls-files | grep -E '^Modding-Documentation/.*\.html$' || true | while IFS= read -r f; do
+            if [ -f "$f" ]; then size=$(wc -c < "$f"); else size=""; fi
+            printf '%s,html,%s\n' "$f" "$size" >> manifest.csv
+          done
 
           echo "Wrote $(( $(wc -l < manifest.csv) - 1 )) entries to manifest.csv"
 
-      - name: Commit manifest.csv
+      - name: Commit manifest
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update manifest.csv"
