@@ -6,6 +6,7 @@ on:
     paths:
       - 'Zero-Sievert-gml-files/**'
       - 'Zero-Sievert-json-files/**'
+      - 'Modding-Documentation/**'
       - '.github/workflows/manifest.yml'
 
 permissions:
@@ -24,7 +25,7 @@ jobs:
 
       - name: Build manifest from Git tree (main)
         env:
-          REPO: ${{ github.repository }}
+          REPO:  ${{ github.repository }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
@@ -34,12 +35,21 @@ jobs:
           curl -fsSL -H "Authorization: Bearer ${TOKEN}" -H "Accept: application/vnd.github+json" "$API" \
           | jq -r '
               .tree
-              | map(select(.type=="blob"
-                           and (.path|test("^Zero-Sievert-(gml|json)-files/"))
-                           and (.path|test("\\.(gml|json)$"))))
+              | map(select(
+                  .type=="blob" and (
+                    # existing mod source folders
+                    ((.path|startswith("Zero-Sievert-gml-files/") or .path|startswith("Zero-Sievert-json-files/"))
+                     and (.path|test("\\.(gml|json)$"))) or
+                    # NEW: only .html inside Modding-Documentation/
+                    ((.path|startswith("Modding-Documentation/")) and (.path|endswith(".html")))
+                  )
+              ))
               | .[]? | [
                   .path,
-                  (if (.path|endswith(".gml")) then "gml" else "json" end),
+                  (if (.path|endswith(".gml")) then "gml"
+                   elif (.path|endswith(".json")) then "json"
+                   elif (.path|endswith(".html")) then "html"
+                   else "unknown" end),
                   (.size // "")
                 ] | @csv
             ' >> manifest.csv
@@ -49,5 +59,5 @@ jobs:
       - name: Commit manifest.csv
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update manifest.csv"
+          commit_message: "chore: update manifest.csv (include Modding-Documentation/*.html)"
           file_pattern: "manifest.csv"
