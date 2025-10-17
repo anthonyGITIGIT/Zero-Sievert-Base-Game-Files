@@ -1,29 +1,43 @@
-- name: Build manifest (gh api, robust)
-  env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: |
-    set -euo pipefail
-    tmp=$(mktemp)
+name: Build manifest
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Zero-Sievert-gml-files/**'
+      - 'Zero-Sievert-json-files/**'
+      - 'Modding-Documentation/**'
+      - '.github/workflows/manifest.yml'
 
-    gh api "repos/${{ github.repository }}/git/trees/main?recursive=1" \
-      --jq '
-        if (.tree|type) != "array" then [] else
-          [ .tree[]
-            | select(.type=="blob" and (
-                # gml/json under the two folders:
-                ((.path|startswith("Zero-Sievert-gml-files/") or .path|startswith("Zero-Sievert-json-files/"))
-                 and (.path|test("\\.(gml|json)$"))) or
-                # html only under Modding-Documentation:
-                ((.path|startswith("Modding-Documentation/")) and (.path|endswith(".html")))
-              ))
-            | [ .path,
-                (if (.path|endswith(".gml")) then "gml"
-                 elif (.path|endswith(".json")) then "json"
-                 else "html" end),
-                (.size // "")
-              ] | @csv
-          ] end
-      ' > "$tmp"
+permissions:
+  contents: write
 
-    { echo "path,type,size_bytes"; cat "$tmp"; } > manifest.csv
-    echo "Wrote $(($(wc -l < manifest.csv)-1)) entries to manifest.csv"
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build manifest from working tree (no jq)
+        run: |
+          set -euo pipefail
+          echo "path,type,size_bytes" > manifest.csv
+
+          # Collect matching files from the repo working tree
+          git ls-files \
+          | grep -E '^(Zero-Sievert-gml-files/.*\.gml|Zero-Sievert-json-files/.*\.json|Modding-Documentation/.*\.html)$' \
+          | awk '{
+              type="unknown";
+              if ($0 ~ /\.gml$/)  type="gml";
+              else if ($0 ~ /\.json$/) type="json";
+              else if ($0 ~ /\.html$/) type="html";
+              printf "%s,%s,%s\n", $0, type, ""
+            }' >> manifest.csv
+
+          echo "Wrote $(( $(wc -l < manifest.csv) - 1 )) entries to manifest.csv"
+
+      - name: Commit manifest.csv
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update manifest.csv"
+          file_pattern: "manifest.csv"
