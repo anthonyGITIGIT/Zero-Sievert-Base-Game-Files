@@ -1,0 +1,390 @@
+{
+	"data" : {	
+		"phase" : [
+			{
+				"length_days" : 4
+			},
+			{
+				"length_days" : 4
+			},
+			{
+				"length_days" : 4
+			},
+			{
+				"length_days" : 4
+			}
+		],
+		"type" : {
+			"sun_1" : {
+				"amount_radiation" : 0,
+				"darkness" : 0,
+				"particle" : [],
+				"wind" : [0,0,1,2,2]
+			},
+			"cloud_1" : {
+				"amount_radiation" : 0,
+				"darkness" : 0.1,
+				"particle" : [],
+				"wind" : [0,1,2,3]
+			},
+			"rain_1" : {
+				"amount_radiation" : 0,
+				"darkness" : 0.1,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 3
+					},
+					{ 
+						"particle_type" : "particle_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 2
+					}
+				],
+				"wind" : [2,3,3,4]
+			},
+			"rain_2" : {
+				"amount_radiation" : 0,
+				"darkness" : 0.2,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 9
+					},
+					{ 
+						"particle_type" : "particle_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 6
+					}
+				],
+				"wind" : [3,4,4,5]
+			},
+			"rain_3" : {
+				"amount_radiation" : 0,
+				"darkness" : 0.4,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 18
+					},
+					{ 
+						"particle_type" : "particle_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 15
+					},
+					{ 
+						"particle_type" : "particle_fog",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [5,6,6,6,7]
+			},
+			"rad_rain_1" : {
+				"darkness" : 0.05,
+				"amount_radiation" : 10,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rad_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					},
+					{ 
+						"particle_type" : "particle_rad_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [2,3,3,4]
+			},
+			"rad_rain_2" : {
+				"darkness" : 0.12,
+				"amount_radiation" : 40,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rad_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 8
+					},
+					{ 
+						"particle_type" : "particle_rad_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 5
+					},
+					{ 
+						"particle_type" : "particle_rad_fog",
+						"particle_chance" : 50,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [3,4,4,5]
+			},
+			"rad_rain_3" : {
+				"darkness" : 0.2,
+				"amount_radiation" : 200,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_rad_rain_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 17
+					},
+					{ 
+						"particle_type" : "particle_rad_rain_splash",
+						"particle_chance" : 100,
+						"particle_amount" : 15
+					},
+					{ 
+						"particle_type" : "particle_fog",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [5,6,6,6,7]
+			},
+			"snow_1" : {
+				"amount_radiation" : 0,
+				"darkness" : 0,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_snow_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 2
+					}
+				],
+				"wind" : [0]
+			},
+			"snow_2" : {
+				"amount_radiation" : 0,
+				"darkness" : 0,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_snow_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 4
+					}
+				],
+				"wind" : [0]
+			},
+			"snow_3" : {
+				"amount_radiation" : 0,
+				"darkness" : 0.2,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_snow_drop",
+						"particle_chance" : 100,
+						"particle_amount" : 8
+					},
+					{ 
+						"particle_type" : "particle_fog",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [0]
+			},
+			"fog_1" : {
+				"amount_radiation" : 0,
+				"darkness" : 0,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_fog",
+						"particle_chance" : 50,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [0,1]
+			},
+			"fog_2" : {
+				"amount_radiation" : 0,
+				"darkness" : 0,
+				"particle" : [
+					{ 
+						"particle_type" : "particle_fog",
+						"particle_chance" : 100,
+						"particle_amount" : 1
+					}
+				],
+				"wind" : [0,1]
+			}
+		},
+		"map" : {
+			"forest" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 10 },
+					{ "id" : "cloud_1" , "chance" : 6 },
+					{ "id" : "rain_1" , "chance" : 5 },
+					{ "id" : "rain_2" , "chance" : 3},
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "fog_1" , "chance" : 4 },
+					{ "id" : "fog_2" , "chance" : 2 }
+				],
+				"temperature_variation" : [0,0],
+				"temperature_phase" : [
+					[5,20],
+					[15,25],
+					[0,15],
+					[-10,-5]
+				]
+			},
+			"makeshift_camp" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 8 },
+					{ "id" : "cloud_1" , "chance" : 4 },
+					{ "id" : "rain_1" , "chance" : 3 },
+					{ "id" : "rain_2" , "chance" : 3 },
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "fog_1" , "chance" : 4 },
+					{ "id" : "fog_2" , "chance" : 2 }
+				],
+				"temperature_variation" : [0,0],
+				"temperature_phase" : [
+					[10,25],
+					[20,30],
+					[5,20],
+					[-5,5]
+				]
+			},
+			"industrial_area" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 5 },
+					{ "id" : "cloud_1" , "chance" : 5 },
+					{ "id" : "rain_1" , "chance" : 2 },
+					{ "id" : "rain_2" , "chance" : 2 },
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "rad_rain_1" , "chance" : 1 },
+					{ "id" : "rad_rain_2" , "chance" : 0 },
+					{ "id" : "fog_1" , "chance" : 2 },
+					{ "id" : "fog_2" , "chance" : 1 }
+				],
+				"temperature_variation" : [0,5],
+				"temperature_phase" : [
+					[10,25],
+					[20,30],
+					[5,20],
+					[-15,-5]
+				]
+			},
+			"swamp" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 2 },
+					{ "id" : "cloud_1" , "chance" : 0 },
+					{ "id" : "rain_1" , "chance" : 0 },
+					{ "id" : "rain_2" , "chance" : 2 },
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "rad_rain_1" , "chance" : 1 },
+					{ "id" : "rad_rain_2" , "chance" : 0 },
+					{ "id" : "fog_1" , "chance" : 0 },
+					{ "id" : "fog_2" , "chance" : 5 }
+				],
+				"temperature_variation" : [-15,15],
+				"temperature_phase" : [
+					[10,25],
+					[25,35],
+					[5,25],
+					[-15,-10]
+				]
+			},
+			"mall" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 5 },
+					{ "id" : "cloud_1" , "chance" : 3 },
+					{ "id" : "rain_1" , "chance" : 3 },
+					{ "id" : "rain_2" , "chance" : 2 },
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "rad_rain_1" , "chance" : 1 },
+					{ "id" : "rad_rain_2" , "chance" : 1 },
+					{ "id" : "fog_1" , "chance" : 1 },
+					{ "id" : "fog_2" , "chance" : 1 }
+				],
+				"temperature_variation" : [0,0],
+				"temperature_phase" : [
+					[10,25],
+					[20,30],
+					[5,20],
+					[-15,-5]
+				]
+			},
+			"city" : {
+				"pool" : [
+					{ "id" : "sun_1" , "chance" : 4 },
+					{ "id" : "cloud_1" , "chance" : 2 },
+					{ "id" : "rain_1" , "chance" : 1 },
+					{ "id" : "rain_2" , "chance" : 2 },
+					{ "id" : "rain_3" , "chance" : 2 },
+					{ "id" : "rad_rain_1" , "chance" : 1 },
+					{ "id" : "rad_rain_2" , "chance" : 1 },
+					{ "id" : "fog_1" , "chance" : 0 },
+					{ "id" : "fog_2" , "chance" : 1 }
+				],
+				"temperature_variation" : [-10,10],
+				"temperature_phase" : [
+					[10,25],
+					[25,40],
+					[10,25],
+					[-20,-10]
+				]
+			}
+		},
+		"wind" : [
+			{
+				"speed" : 0,
+				"offset" : 0,
+				"incline" : 0,
+				"pattern" : 0,
+			},
+			{
+				"speed" : 0.4,
+				"offset" : 0.4,
+				"incline" : 0.4,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 0.8,
+				"offset" : 0.8,
+				"incline" : 0.4,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 1,
+				"offset" : 1,
+				"incline" : 0.3,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 1.4,
+				"offset" : 1.4,
+				"incline" : 0.1,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 2,
+				"offset" : 2,
+				"incline" : 0,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 2.5,
+				"offset" : 2.5,
+				"incline" : 0,
+				"pattern" : 0.5,
+			},
+			{
+				"speed" : 3,
+				"offset" : 3,
+				"incline" : 0,
+				"pattern" : 0.5,
+			}
+		
+		]
+	},
+	"metadata" : {
+		"author" : "Luca",
+		"description" : "Base gamedata for ZERO Sievert",
+		"project" : "ZERO Sievert"
+	},
+	"usage" : "weather",
+	"version" : 0
+}

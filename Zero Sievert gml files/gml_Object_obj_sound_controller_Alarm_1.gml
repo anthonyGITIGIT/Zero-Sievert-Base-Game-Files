@@ -1,0 +1,2 @@
+audio_falloff_set_model(audio_falloff_linear_distance_clamped);
+audio_group_load(snd_45);

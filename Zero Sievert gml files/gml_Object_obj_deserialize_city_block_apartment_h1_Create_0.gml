@@ -1,0 +1,2 @@
+event_inherited();
+array_room = [r_i_city_block_apartment_h1_1, r_i_city_block_apartment_h1_1_2, r_i_city_block_apartment_h1_1_3, r_i_city_block_apartment_h1_2, r_i_city_block_apartment_h1_2_2, r_i_city_block_apartment_h1_2_3, r_i_city_block_apartment_h1_3, r_i_city_block_apartment_h1_3_2, r_i_city_block_apartment_h1_3_3];

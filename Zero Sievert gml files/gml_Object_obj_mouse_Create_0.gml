@@ -1,0 +1,17 @@
+item_id_dragged = -1;
+item_id_show = item_id_dragged;
+dragging = false;
+prev_x = 0;
+prev_y = 0;
+prev_position = 0;
+click_offsetx = 0;
+click_offsety = 0;
+linea_libera_gun_mouse = false;
+previous_x = 0;
+previous_y = 0;
+image_speed = 0;
+image_index = 0;
+min_distance_id = 0;
+alpha_dot_timer = 0;
+alpha_factor = 1;
+alpha_dot = 1;

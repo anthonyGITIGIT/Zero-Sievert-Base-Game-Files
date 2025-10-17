@@ -1,0 +1,125 @@
+{
+	"data" : {
+		"languages" : {
+			"english" : {
+				"display_name" : "English",
+				"csv" : "ZS_vanilla/languages/english/english.csv",
+				"font" : "ZS_vanilla/languages/english/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"spanish_es" : {
+				"display_name" : "Español",
+				"csv" : "ZS_vanilla/languages/spanish_es/spanish_es.csv",
+				"font" : "ZS_vanilla/languages/spanish_es/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"spanish_latam" : {
+				"display_name" : "Español (América Latina)",
+				"csv" : "ZS_vanilla/languages/spanish_latam/spanish_latam.csv",
+				"font" : "ZS_vanilla/languages/spanish_latam/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"pt_br" : {
+				"display_name" : "Português (Brasil)",
+				"csv" : "ZS_vanilla/languages/pt_br/pt_br.csv",
+				"font" : "ZS_vanilla/languages/pt_br/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"german" : {
+				"display_name" : "Deutsch",
+				"csv" : "ZS_vanilla/languages/german/german.csv",
+				"font" : "ZS_vanilla/languages/german/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"chinese_simplified" : {
+				"display_name" : "中文(中华人民共和国)",
+				"csv" : "ZS_vanilla/languages/chinese_simplified/chinese_simplified.csv",
+				"font" : "ZS_vanilla/languages/chinese_simplified/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"japanese" : {
+				"display_name" : "日本語",
+				"csv" : "ZS_vanilla/languages/japanese/japanese.csv",
+				"font" : "ZS_vanilla/languages/japanese/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+			"korean" : {
+				"display_name" : "한국어",
+				"csv" : "ZS_vanilla/languages/korean/korean.csv",
+				"font" : "ZS_vanilla/languages/korean/silver.ttf",
+				"font_sizes" : [13,15,18,27,36,68],
+				"font_offset" : [
+					{"x" : 0, "y" : 2, "linebreak_height" : 18},
+					{"x" : 0, "y" : 2, "linebreak_height" : 20},
+					{"x" : 0, "y" : 3, "linebreak_height" : 23},
+					{"x" : 0, "y" : 5, "linebreak_height" : 32},
+					{"x" : 0, "y" : 6, "linebreak_height" : 41},
+					{"x" : 0, "y" : 10, "linebreak_height" : 73}
+				]
+			},
+		}
+	},
+	"metadata" : {
+		"author" : "Fern Nigro",
+		"description" : "Base gamedata for ZERO Sievert",
+		"project" : "ZERO Sievert"
+	},
+	"usage" : "languages",
+	"version" : 0
+}

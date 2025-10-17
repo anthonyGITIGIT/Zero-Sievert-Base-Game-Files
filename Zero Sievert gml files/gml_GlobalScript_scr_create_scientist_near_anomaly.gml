@@ -1,0 +1,18 @@
+function scr_create_scientist_near_anomaly(arg0)
+{
+    if (instance_exists(obj_prologue))
+        exit;
+    
+    var radius = (arg0 * 16) + 32;
+    var dir = irandom(360);
+    var xx = x + lengthdir_x(radius, dir);
+    var yy = y + lengthdir_y(radius, dir);
+    var b = instance_create_depth(xx, yy, 0, obj_scientist);
+    b.state = "scientist_idle";
+    b = instance_create_depth(xx + 10, yy + 10, 0, obj_scientist);
+    b.state = "scientist_idle";
+    b = instance_create_depth(xx - 10, yy - 10, 0, obj_scientist_2);
+    
+    with (b)
+        scr_npc_arms("scientist_working", obj_arms_scientist_working);
+}

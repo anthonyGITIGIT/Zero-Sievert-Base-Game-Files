@@ -1,0 +1,3 @@
+function lista_idee()
+{
+}
